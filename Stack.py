@@ -14,18 +14,9 @@ class Stack:
     def print_stack(self):
         print(self.items)
 
-class Queue:
-    def __init__(self):
-        self.items = []
+    def size(self):
+        return len(self.items)
 
-    def isEmpty(self):
-        return self.items == []
-
-    def enque(self, item):
-        self.items.append(item)
-
-    def dequeue(self):
-        return self.items.pop()
 
 
 s = Stack()
@@ -37,4 +28,5 @@ s.push(276)
 s.print_stack()
 s.pop()
 s.print_stack()
+print(s.size())
     
