@@ -21,6 +21,9 @@ class Queue:
     def isEmpty(self):
         return self.items == []
 
+    def enque(self, item):
+        self.items.append(item)
+
     def dequeue(self):
         return self.items.pop()
 
