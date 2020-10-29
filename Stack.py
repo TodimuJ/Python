@@ -17,7 +17,13 @@ class Stack:
 class Queue:
     def __init__(self):
         self.items = []
-        
+
+    def isEmpty():
+        return self.items == []
+
+    def dequeue(self):
+        return self.items.pop()
+
 
 s = Stack()
 s.push(20)
