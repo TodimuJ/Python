@@ -18,7 +18,7 @@ class Queue:
     def __init__(self):
         self.items = []
 
-    def isEmpty():
+    def isEmpty(self):
         return self.items == []
 
     def dequeue(self):
