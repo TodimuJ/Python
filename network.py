@@ -54,7 +54,5 @@ class Speed_Test(object):
         return tabulate(data, headers="keys", tablefmt="pretty")
     
 
-
-
 if __name__ == "__main__":
     print(Speed_Test())
