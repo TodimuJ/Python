@@ -1,5 +1,5 @@
 import psutil
-import speedtest
+#import speedtest
 from tabulate import tabulate
 
 class Network_Details(object):
@@ -55,4 +55,4 @@ class Speed_Test(object):
     
 
 if __name__ == "__main__":
-    print(Speed_Test())
+    print(Network_Details())
