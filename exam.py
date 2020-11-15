@@ -2,7 +2,7 @@ from math import pi
 
 class Circle:
     # initializer
-    def __init__(self, radius = 1):
+    def __init__(self, radius = 2):
         # make radius private
         self.__radius = radius
         # methods
@@ -14,7 +14,7 @@ class Circle:
         return self.__radius
 
 class Square:
-    def __init__(self, length=2):
+    def __init__(self, length=3):
         self.__length = length  
     def getPerimeter(self):
         return 4 * self.__length 
