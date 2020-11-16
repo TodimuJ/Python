@@ -4,7 +4,7 @@ def main():
     check = input("Enter \"y\" to add jumps or \"n\" to view total number of jumps: ")
 
     if check.lower() == 'y':
-        jumps = int(input("How many jumps did you do?: "))
+        jumps = int(input("How many jumps did you do today?: "))
 
     elif check.lower() == 'n':
         pass
@@ -15,7 +15,7 @@ def main():
 
     store.append(jumps)
     
-    print("Total number of jumps:", sum([int(x) for x in store]))
+    print("Total number of current  jumps:", sum([int(x) for x in store]))
 
 
 main()
