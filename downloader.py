@@ -1,7 +1,6 @@
 from urllib import request
 from datetime import date, datetime, timedelta
 
-
 def multiple():
     sites = []
     mySite = input("Type the URL to the link: ")
@@ -29,8 +28,6 @@ def multiple():
         fx.close()
 
 
-
-   
 def single(website):
     response = request.urlopen(website)
     txt = response.read()
@@ -44,7 +41,7 @@ def single(website):
     fx.close()
 
 
-#single(sites[2])
+
 multiple()
 #single(website)
 
