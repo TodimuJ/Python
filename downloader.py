@@ -1,22 +1,32 @@
 from urllib import request
 from datetime import date, datetime, timedelta
 
-sites = ['']
 
 def multiple():
-    index = 0
+    sites = []
+    mySite = input("Type the URL to the link: ")
+    sites.append(mySite)
+    print("")
+    fmts = ['txt', 'doc', 'xlsx', 'pdf', 'xml']
+    print("Type the number of a format below:")
+    print("")
+    for i in range(len(fmts)):
+        print(i, fmts[i])
+
+    print("")
+    fmt = int(input(""))
+
     for site in sites:
         response = request.urlopen(site)
         txt = response.read()
         txt_str = str(txt)
         lines = txt_str.split("\\n")
         today = datetime.now().strftime("%Y-%m-%d")
-        destination = r'"File Path"' + '{}'.format(today) + '__({})' + '.pdf'
+        destination = r'./' + '{}'.format(today) + '.' + fmts[fmt]
         fx = open(destination, "w")
         for line in lines:
             fx.write(line + "\n")
         fx.close()
-        index += 1
 
 
 
