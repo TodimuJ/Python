@@ -14,4 +14,4 @@ print(f"Current frequency: {frequency.current: .2f}MHz")
 print("CPU usage per core:")
 for i, percentage in enumerate(psutil.cpu_percent(percpu=True, interval=1)):
     print(f"Core {i} {percentage}%")
-print(f"Total CPU Usage: {psutil.cpu_percent()}%")
+print(f"Total CPU usage: {psutil.cpu_percent()}%")
