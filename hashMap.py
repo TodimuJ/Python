@@ -9,15 +9,15 @@ class HashMap:
             hash += ord(char)
         return hash % self.size
 
-     def add(self, key, value):
-         key_hash = self.getHash(key)
-         key_value = [key, value]
+    def add(self, key, value):
+        key_hash = self.getHash(key)
+        key_value = [key, value]
 
-         if self.map[key_hash] is None:
-             self.map[key_hash] = list([key_value])
-             return True
+        if self.map[key_hash] is None:
+            self.map[key_hash] = list([key_value])
+            return True
         else: 
-            for pair in self.map[key_hash]
+            for pair in self.map[key_hash]:
                 if pair[0] == key:
                     pair[1] == value
                     return True
@@ -47,8 +47,10 @@ class HashMap:
     def print(self):
         print('-----PHONEBOOK------')
         for i in self.map:
-            if item is not None:
-                print(str(i)
+            if i is not None:
+                print(str(i))
+
+
 
 h = HashMap(6)
 h.add('Bob', '567-8888')
