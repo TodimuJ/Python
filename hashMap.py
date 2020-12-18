@@ -44,4 +44,22 @@ class HashMap:
                 self.map[key_hash].pop(i)
                 return True
 
+    def print(self):
+        print('-----PHONEBOOK------')
+        for i in self.map:
+            if item is not None:
+                print(str(i)
 
+h = HashMap(6)
+h.add('Bob', '567-8888')
+h.add('Ming', '293-6753')
+h.add('Ming', '567-3457')
+h.add('Ankit', '256-5893')
+h.add('Aditya', '569-2048')
+h.add('Alicia', '143-2239')
+h.add('Mike', '233-0047')
+h.add('Aditya', '234-7098')
+h.print()
+h.delete('Bob')
+h.print()
+print('Ming:' + h.get('Ming'))
