@@ -16,7 +16,7 @@ def copyassignment(x, y):
     return (1-x / 2 + x**5 + y**6) * np.exp(-(x**2 + y**2))
 
 Z2 = copyassignment(X, Y)
-plt.imshow(Z2, alpha = 0.68, interpolation = 'bilinear', extent = extent)
+plt.imshow(Z2, alpha = 0.69, interpolation = 'bilinear', extent = extent)
 plt.cool()
 plt.title('Chess Board', fontweight = "bold")
 plt.show()
