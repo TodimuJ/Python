@@ -12,15 +12,15 @@ def binarySearch(array, number):
         elif number < midpoint_value:
             eIndex = midpoint - 1
         
-        else:
+        elif number > midpoint_value:
             bIndex = midpoint + 1
 
-    # return None
+    return None
 
-sequence = [2, 4, 1, 7, 8, 3, 96, 34, 76, 21, 11, 9, 54, 32, 54, 67, 33]
-item1 = 21
+sequence = [2, 4, 1, 7, 8, 3, 96, 340, 76, 24, 21, 11, 9, 54, 32, 54, 67, 33]
+item1 = 2
 item2 = 76
-item3 = 34
+item3 = 24
 item4 = 37
 
 print(binarySearch(sequence, item1))
