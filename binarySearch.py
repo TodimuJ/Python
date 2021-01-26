@@ -6,24 +6,24 @@ def binarySearch(array, number):
         midpoint = bIndex + (eIndex - bIndex) // 2
         midpoint_value = array[midpoint]
 
-        if midpoint_value == array:
+        if midpoint_value == number:
             return midpoint_value
         
-        elif midpoint_value < array:
+        elif midpoint_value < number:
             eIndex = midpoint - 1
         
-        elif midpoint_value > array:
+        else:
             bIndex = midpoint + 1
 
-        else:
-            return "Item not found"
-
+    return None
 
 sequence = [2, 4, 1, 7, 8, 3, 96, 34, 76, 21, 11, 9, 54, 32, 54, 67, 33]
 item1 = 67
 item2 = 1
 item3 = 34
+item4 = 37
 
-binarySearch(sequence, item1)
-binarySearch(sequence, item2)
-binarySearch(sequence, item3)
+print(binarySearch(sequence, item1))
+print(binarySearch(sequence, item2))
+print(binarySearch(sequence, item3))
+print(binarySearch(sequence, item4))
