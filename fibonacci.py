@@ -10,8 +10,11 @@ def fibonacci(n):
 
 def fibonacci1(n):
     goldenRatio = ((1 + 5 ** 0.5) / 2)
-  	return int((goldenRatio ** N + 1) / 5 ** 0.5)
+    return int((goldenRatio ** n + 1) / 5 ** 0.5)
 
 
 for n in range(1, 13):
-    print(n, ":", fibonacci(n) )
+    print(n, ":", fibonacci(n))
+
+
+print(fibonacci1(10))
