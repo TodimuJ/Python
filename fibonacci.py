@@ -47,22 +47,22 @@ def fibonacci2(n):
 
 
 
-
 start_time = time.time()
-for n in range(1, 40):
-    # print(n, ":", fibonacci1(n))
+for n in range(1, 50):
+    # print(n, ":", fibonacci(n))
     fibonacci(n)
-print("--- %s seconds ---" % (time.time() - start_time))
+print("Recurssion time:" + (time.time() - start_time) + "seconds")
+
 
 start_time = time.time()
-for n in range(1, 40):
+for n in range(1, 50):
     # print(n, ":", fibonacci1(n))
     fibonacci1(n)
-print("--- %s seconds ---" % (time.time() - start_time))
+print("Memoization time:" + (time.time() - start_time) + "seconds")
+
 
 start_time = time.time()
-for n in range(1, 40):
-    # print(n, ":", fibonacci1(n))
+for n in range(1, 50):
+    # print(n, ":", fibonacci2(n))
     fibonacci2(n)
-print("--- %s seconds ---" % (time.time() - start_time))
-
+print("Formula time:" + (time.time() - start_time) + "seconds")
