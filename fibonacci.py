@@ -2,6 +2,10 @@ import time
 
 #Different ways to implement the Fibonacci Sequence
 def fibonacci(n):
+    if type(n) != int or n < 0:
+        raise TypeError("n must be a positive integer")
+
+
     fib = [0, 1, 1]
     if n <= 2:
         return fib[n]
@@ -13,6 +17,10 @@ def fibonacci(n):
 fibonacci_cache = {}
 def fibonacci1(n):
     #Efficient algorithm using memoization where previous terms are stored in memory rather than computed
+    if type(n) != int or n < 0:
+        raise TypeError("n must be a positive integer")
+
+
     if n in fibonacci_cache:
         return fibonacci_cache[n]
 
@@ -30,6 +38,10 @@ def fibonacci1(n):
 
 
 def fibonacci2(n):
+    if type(n) != int or n < 0:
+        raise TypeError("n must be a positive integer")
+
+
     goldenRatio = ((1 + 5 ** 0.5) / 2)
     return int((goldenRatio ** n + 1) / 5 ** 0.5)
 
@@ -53,3 +65,4 @@ for n in range(1, 40):
     # print(n, ":", fibonacci1(n))
     fibonacci2(n)
 print("--- %s seconds ---" % (time.time() - start_time))
+
