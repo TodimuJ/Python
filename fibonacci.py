@@ -34,17 +34,18 @@ def fibonacci2(n):
     return int((goldenRatio ** n + 1) / 5 ** 0.5)
 
 start_time = time.time()
-
 for n in range(1, 40):
     # print(n, ":", fibonacci1(n))
     fibonacci(n)
 print("--- %s seconds ---" % (time.time() - start_time))
 
+start_time = time.time()
 for n in range(1, 40):
     # print(n, ":", fibonacci1(n))
     fibonacci1(n)
 print("--- %s seconds ---" % (time.time() - start_time))
 
+start_time = time.time()
 for n in range(1, 40):
     # print(n, ":", fibonacci1(n))
     fibonacci2(n)
