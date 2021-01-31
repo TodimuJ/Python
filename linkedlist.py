@@ -1,41 +1,137 @@
 class Node:
-    def __init__(self, data = None):
+    def __init__(self, data = None, next = None):
         self.data = data
-        self.next = None
-
+        self.next = next
+ 
 class LinkedList:
     def __init__(self):
         self.head = None
     
-    def AtEnd(self, newdata):
-        NewNode = Node(newdata)
+    def insert(self, data):
+        NewNode = Node(data, None)
         if self.head is None:
             self.head = NewNode
-            return 
+            return
+        
+        itr = self.head
+        
+        while(itr.next):
+            itr = itr.next
+        
+        itr.next = NewNode
+        
+    def insertAB(self, data):
+        node = Node(data, self.head)
+        self.head = node
+    
+    def insertValues(self, data):
+        self.head = None
+        
+        for i in data:
+            self.insert(i)
+    
+    def length(self):
+        count = 0 
+        
+        itr = self.head
+        
+        while(itr):
+            count += 1
+            itr = itr.next
+        
+        return count
+    
+    def insertAt(self, data, index):
+        if self.head is None:
+            self.head = Node(data, None)
+            return
+        
+        if index  == 0:
+            self.insertAB(data)
+            return
+        
+        count = 0
+        
+        itr = self.head
+        
+        while(itr):
+            if count == index -1:
+                node = Node(data, itr.next)
+                itr.next = node
+                break
+                
+            
+            itr = itr.next
+            count += 1 
+        
+    def print(self):
+        
+        if self.head == None:
+            print("Linked List is empty")
+            return
+        else:
+            itr = self.head
+            llstr = 'Length of list is: '
+            
+            while itr:
+                llstr += str(itr.data)
+                if itr.next != None:
+                    llstr += ' --> '
+                itr = itr.next
+            
+            print(llstr)
+            
+    def remove(self, index):
+        if self.head is None:
+            print("Linked List is empty")
+            return
+        
+        if index > self.length() or index < 1:
+            print("Invalid index")
+            return
+        
+        if index == 0:
+            self.head = self.head.next
+            return
+            
+            
+        count = 0
+        
+        itr = self.head
 
-        last = self.head
-        while(last.next):
-            last = last.next
-        last.next = NewNode
+        while(itr):
+            
+            if count == index -1:
+                itr.next = itr.next.next
+                break
+            
+            count += 1
+            itr = itr.next
+            
+  
+            
 
-    def printList(self):
-        printval = self.head
-        while printval is not None:
-            print(printval.data)
-            printval = printval.next
-
-
-list = LinkedList()
-list.head = Node("Monday")
-e2 = Node("Tuesday")
-e3 = Node("Wednesday")
-e4 = Node("Thursday")
-e5 = Node("Friday")
-e6 = Node("Saturday")
-list.head.next = e2
-e2.next = e3
-e3.next = e4
-e4.next = e5
-e5.next = e6
-list.AtEnd("Sunday")
-list.printList()
+if __name__ == '__main__':
+    ll = LinkedList()
+    ll.insertAB(5)
+    ll.insertAB(16)
+    ll.insertAB(37)
+    ll.insertAB(19)
+    ll.insert(50)
+    # ll.insertValues(["mangoes", "oranges", "bananas", "grapes"])
+    ll.print()
+    print(ll.length())
+    ll.remove(3)
+    ll.print()
+    ll.insertAt(28, 0)
+    ll.print()
+    ll.insertAt(44, 3)
+    ll.print()
+    ll.insert(67)
+    ll.print()
+    ll.insertAt(100, 4)
+    ll.print()
+    print(ll.length())
+    ll.remove(2)
+    ll.print()
+    print(ll.length())
