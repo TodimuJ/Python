@@ -71,7 +71,7 @@ class LinkedList:
             return
         else:
             itr = self.head
-            llstr = 'Length of list is: '
+            llstr = ''
             
             while itr:
                 llstr += str(itr.data)
