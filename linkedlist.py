@@ -42,16 +42,19 @@ class LinkedList:
         return count
 
     def reverse(self):
+        prev = None
         itr = self.head
 
-        while(itr):
-            self.insertAB(itr.data)
+        while itr:
+            temp = itr
             itr = itr.next
+            temp.next = prev
+            prev = temp
 
-        return itr
+        self.head = prev
+        
+        return self.head
 
-
-    
     def insertAt(self, data, index):
         if self.head is None:
             self.head = Node(data, None)
