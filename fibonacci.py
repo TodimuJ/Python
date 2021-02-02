@@ -48,21 +48,21 @@ def fibonacci2(n):
 
 
 start_time = time.time()
-for n in range(1, 50):
+for n in range(1, 37):
     # print(n, ":", fibonacci(n))
     fibonacci(n)
-print("Recurssion time:" + (time.time() - start_time) + "seconds")
+print("Recursion time: " + str((time.time() - start_time)) + " seconds")
 
 
 start_time = time.time()
-for n in range(1, 50):
+for n in range(1, 37):
     # print(n, ":", fibonacci1(n))
     fibonacci1(n)
-print("Memoization time:" + (time.time() - start_time) + "seconds")
+print("Memoization time: " + str((time.time() - start_time)) + " seconds")
 
 
 start_time = time.time()
-for n in range(1, 50):
+for n in range(1, 37):
     # print(n, ":", fibonacci2(n))
     fibonacci2(n)
-print("Formula time:" + (time.time() - start_time) + "seconds")
+print("Formula time: " + str((time.time() - start_time)) + " seconds")
