@@ -40,6 +40,17 @@ class LinkedList:
             itr = itr.next
         
         return count
+
+    def reverse(self):
+        itr = self.head
+
+        while(itr):
+            self.insertAB(itr.data)
+            itr = itr.next
+
+        return itr
+
+
     
     def insertAt(self, data, index):
         if self.head is None:
@@ -135,3 +146,5 @@ if __name__ == '__main__':
     lkdlst.remove(2)
     lkdlst.print()
     print(lkdlst.length())
+    lkdlst.reverse()
+    lkdlst.print()
