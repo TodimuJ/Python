@@ -49,7 +49,7 @@ def fibonacci2(n):
 
 start_time = time.time()
 for n in range(1, 37):
-    # print(n, ":", fibonacci(n))
+    # print(n, ":", fibonacci(n)) 
     fibonacci(n)
 print("Recursion time: " + str((time.time() - start_time)) + " seconds")
 
