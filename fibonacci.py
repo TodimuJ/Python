@@ -47,6 +47,7 @@ def fibonacci2(n):
 
 
 
+#Very time consuming algorithm
 start_time = time.time()
 for n in range(1, 37):
     # print(n, ":", fibonacci(n)) 
