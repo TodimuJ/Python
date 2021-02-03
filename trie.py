@@ -14,10 +14,29 @@ class Solution:
             for char in word:
                 if not char in current.children:
                      current.children[char] = Node(False, {})
+                current = current.children[char]
+            current.isWord = True 
                  
     
     def autocomplete(self, prefix):
-        return []
+        current = self.trie
+        for char in word:
+            if not char in current.children:
+                return []
+            current = current.children[char]
+        
+        return self.findWordsFromNode(current, word)
+
+    def findWordsFromNode(self, node, prefix):
+        words = []
+        if node.isWord:
+            words += [prefix]
+        
+        for char in node.children:
+            words += self.findWordsFromNode(node.children[char], prefix + char)
+
+        return words
+
     
 
 s = Solution()
