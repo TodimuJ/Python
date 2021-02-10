@@ -52,7 +52,7 @@ for i in text:
     new += 7*ord(i) + 1
         
 print(text)
-print(new)
+# print(new)
 
 
 
