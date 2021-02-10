@@ -42,5 +42,5 @@ class Solution:
 s = Solution()
 s.build(['dog', 'dark', 'cat', 'door', 'dodge', 'dentist', 'fume', 'doodle'])
 print(s.autocomplete('do'))
-# ['dog', 'door', 'dodge']
+# ['dog', 'door', 'dodge', 'doodle']
 
