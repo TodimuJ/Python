@@ -308,7 +308,7 @@ def predict(frame, stream):
 
 if __name__ == "__main__":
 
-# Example: FIFO 3, press enter and input frame entries
+# Example: FIFO 3, press enter and input frame entries.
 
 
     while True:
