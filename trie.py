@@ -6,9 +6,13 @@ class Node:
 class Solution:
     def __init__(self):
         self.trie = None
+        # self.root = Node({}, False)
+
 
     def build(self, words):
         self.trie = Node({}, False)
+        # current = self.root
+
         for word in words:
             current = self.trie
             for char in word:
@@ -24,6 +28,8 @@ class Solution:
 
         else:
             current = self.trie
+            # current = self.root
+
             for char in prefix:
                 if not char in current.children:
                     return []
@@ -34,6 +40,7 @@ class Solution:
 
             return three
 
+
     def findWordsFromNode(self, node, prefix):
         words = []
         if node.isWord:
@@ -43,6 +50,7 @@ class Solution:
             words += self.findWordsFromNode(node.children[char], prefix + char)
 
         return words
+
 
     def getPrefix(self):
         while True:
@@ -58,7 +66,8 @@ class Solution:
     
 
 s = Solution()
-s.build(['dog', 'dark', 'cat', 'door', 'date', 'daddy', 'daemon', 'dodge', 'dentist', 'fume', 'doodle', 'dash', 'deal', 'deaf', 'destiny', 'deloitte', 'dealer', 'dew'])
+s.build(['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'drone', 'dodge', 'dentist', 'fume', 'dragon', 'doodle', 'dash', 
+'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'dew', 'dArts', 'drift', 'dress'])
 # print(s.autocomplete('d'))
 print(s.getPrefix())
 
