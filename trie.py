@@ -20,7 +20,7 @@ class Solution:
     
     def autocomplete(self, prefix):
         if len(prefix) < 2:
-            return "Please input at least three letters"
+            return "Please input at least two letters \n"
 
         else:
             current = self.trie
@@ -44,10 +44,21 @@ class Solution:
 
         return words
 
+    def getPrefix(self):
+        while True:
+            letter = input("Start typing word: \n")
+            if letter == "":
+                "End of search \n"
+                break
+
+            print(s.autocomplete(letter))
+
+        
+
     
 
 s = Solution()
-s.build(['dog', 'dark', 'cat', 'door', 'dodge', 'dentist', 'fume', 'doodle', 'dash', 'deal', 'deaf', 'destiny', 'deloitte', 'dealer', 'dew'])
-print(s.autocomplete('d'))
-# ['dog', 'door', 'dodge', 'doodle']
+s.build(['dog', 'dark', 'cat', 'door', 'date', 'daddy', 'daemon', 'dodge', 'dentist', 'fume', 'doodle', 'dash', 'deal', 'deaf', 'destiny', 'deloitte', 'dealer', 'dew'])
+# print(s.autocomplete('d'))
+print(s.getPrefix())
 
