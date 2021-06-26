@@ -19,13 +19,20 @@ class Solution:
                  
     
     def autocomplete(self, prefix):
-        current = self.trie
-        for char in prefix:
-            if not char in current.children:
-                return []
-            current = current.children[char]
-        
-        return self.findWordsFromNode(current, prefix)
+        if len(prefix) < 2:
+            return "Please input at least three letters"
+
+        else:
+            current = self.trie
+            for char in prefix:
+                if not char in current.children:
+                    return []
+                current = current.children[char]
+
+            three = sorted(self.findWordsFromNode(current, prefix))[:3]
+            normal = self.findWordsFromNode(current, prefix)
+
+            return three
 
     def findWordsFromNode(self, node, prefix):
         words = []
@@ -40,7 +47,7 @@ class Solution:
     
 
 s = Solution()
-s.build(['dog', 'dark', 'cat', 'door', 'dodge', 'dentist', 'fume', 'doodle'])
-print(s.autocomplete('do'))
+s.build(['dog', 'dark', 'cat', 'door', 'dodge', 'dentist', 'fume', 'doodle', 'dash', 'deal', 'deaf', 'destiny', 'deloitte', 'dealer', 'dew'])
+print(s.autocomplete('d'))
 # ['dog', 'door', 'dodge', 'doodle']
 

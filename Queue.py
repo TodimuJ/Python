@@ -31,4 +31,4 @@ q.print_stack()
 q.dequeue()
 print(q.size())
 q.print_stack()
-
+print(q.isEmpty())
