@@ -331,3 +331,4 @@ if __name__ == "__main__":
                     algorithms[i](int(select[1]))
         
         print("\n")
+
