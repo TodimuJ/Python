@@ -28,23 +28,36 @@
 
 
 ####################################################################### Find target sum
-arr = [2, 5, 6, 7, 9, 13, 16, 19, 23]
+# arr = [2, 5, 6, 7, 9, 13, 16, 19, 23]
 
-def targetSum(array, target):
-    i = 0
-    j = len(array)-1
+# def targetSum(array, target):
+#     i = 0
+#     j = len(array)-1
     
-    while i != j:
-        if array[i] + array[j] == target:
-            return [i,j]
+#     while i != j:
+#         if array[i] + array[j] == target:
+#             return [i,j]
         
-        elif array[i] + array[j] > target:
-            j -= 1
+#         elif array[i] + array[j] > target:
+#             j -= 1
         
-        else:
-            i += 1
+#         else:
+#             i += 1
     
-    return -1
+#     return -1
     
     
-print(targetSum(arr, 42))
+# print(targetSum(arr, 42))
+
+####################################################################### Count inversions in an array
+#How many operations to make it sorted
+array = [10, 3, 9, 6, 1]
+output = []
+
+for i in range(len(array)):
+    for j in range(i+1, len(array[i:])):
+        if array[i] > array[j]:
+            output.append((array[i], array[j]))
+
+print(output)
+print(len(output))
