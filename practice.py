@@ -51,13 +51,51 @@
 
 ####################################################################### Count inversions in an array
 #How many operations to make it sorted
-array = [10, 3, 9, 6, 1]
-output = []
+# array = [10, 3, 9, 6, 1]
+# output = []
 
-for i in range(len(array)):
-    for j in range(i+1, len(array[i:])):
-        if array[i] > array[j]:
-            output.append((array[i], array[j]))
+# for i in range(len(array)):
+#     for j in range(i+1, len(array[i:])):
+#         if array[i] > array[j]:
+#             output.append((array[i], array[j]))
 
-print(output)
-print(len(output))
+# print(output)
+# print(len(output))
+
+
+
+####################################################################### 1481 Least Number of unique integers
+class Solution:
+    def findLeastNumOfUniqueInts(self, nums: List[int], k: int) -> int:
+        cache = {}
+        
+        for num in range(len(nums)):
+            if nums[num] not in cache:
+                cache[nums[num]] = 0
+                
+            cache[nums[num]] += 1
+            
+        cache = sorted(cache.items(), key = lambda x:x[1])
+        count = 0
+        l = 0
+        
+#         for i, j in enumerate(cache):
+#             print(i,j)
+#             if j[1] <= k:
+#                 cache.pop(i)
+                
+#             k -= j[1]
+                
+#             if k == 0:
+#                 break
+        while k > 0:
+            if cache[l][1] <= k:
+                # times.append(cache[l])
+                count += 1
+                
+            k -= cache[l][1]
+            
+            l += 1
+            
+                
+        return len(cache) - count
