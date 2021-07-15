@@ -65,37 +65,77 @@
 
 
 ####################################################################### 1481 Least Number of unique integers
+# class Solution:
+#     def findLeastNumOfUniqueInts(self, nums: List[int], k: int) -> int:
+#         cache = {}
+        
+#         for num in range(len(nums)):
+#             if nums[num] not in cache:
+#                 cache[nums[num]] = 0
+                
+#             cache[nums[num]] += 1
+            
+#         cache = sorted(cache.items(), key = lambda x:x[1])
+#         count = 0
+#         l = 0
+        
+# #         for i, j in enumerate(cache):
+# #             print(i,j)
+# #             if j[1] <= k:
+# #                 cache.pop(i)
+                
+# #             k -= j[1]
+                
+# #             if k == 0:
+# #                 break
+#         while k > 0:
+#             if cache[l][1] <= k:
+#                 # times.append(cache[l])
+#                 count += 1
+                
+#             k -= cache[l][1]
+            
+#             l += 1
+            
+                
+#         return len(cache) - count
+
+
+
+####################################################################### 206 Reverse Linked List 1
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+        
 class Solution:
-    def findLeastNumOfUniqueInts(self, nums: List[int], k: int) -> int:
-        cache = {}
+    def reverseList(self, head: ListNode) -> ListNode:
+        prev = None
         
-        for num in range(len(nums)):
-            if nums[num] not in cache:
-                cache[nums[num]] = 0
-                
-            cache[nums[num]] += 1
+        while head:
+            temp = head
+            head = head.next
+            temp.next = prev
+            prev = temp
             
-        cache = sorted(cache.items(), key = lambda x:x[1])
-        count = 0
-        l = 0
+        return prev
         
-#         for i, j in enumerate(cache):
-#             print(i,j)
-#             if j[1] <= k:
-#                 cache.pop(i)
+    
+# ####################################################################### 387 First unique character in string
+# from collections import OrderedDict
+
+# class Solution:
+#     def firstUniqChar(self, s: str) -> int:
+#         cache = OrderedDict()
+    
+#         for i in range(len(s)):
+#             if s[i] not in cache:
+#                 cache[s[i]] = [0, i]
                 
-#             k -= j[1]
-                
-#             if k == 0:
-#                 break
-        while k > 0:
-            if cache[l][1] <= k:
-                # times.append(cache[l])
-                count += 1
-                
-            k -= cache[l][1]
+#             cache[s[i]][0] += 1
             
-            l += 1
+#         for x in cache:
+#             if cache[x][0] == 1:
+#                 return cache[x][1]
             
-                
-        return len(cache) - count
+#         return -1
