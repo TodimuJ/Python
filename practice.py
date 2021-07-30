@@ -122,20 +122,20 @@
         
     
 ####################################################################### 387 First unique character in string
-from collections import OrderedDict
+# from collections import OrderedDict
 
-class Solution:
-    def firstUniqChar(self, s: str) -> int:
-        cache = OrderedDict()
+# class Solution:
+#     def firstUniqChar(self, s: str) -> int:
+#         cache = OrderedDict()
     
-        for i in range(len(s)):
-            if s[i] not in cache:
-                cache[s[i]] = [0, i]
+#         for i in range(len(s)):
+#             if s[i] not in cache:
+#                 cache[s[i]] = [0, i]
                 
-            cache[s[i]][0] += 1
+#             cache[s[i]][0] += 1
             
-        for x in cache:
-            if cache[x][0] == 1:
-                return cache[x][1]
+#         for x in cache:
+#             if cache[x][0] == 1:
+#                 return cache[x][1]
             
-        return -1
+#         return -1
