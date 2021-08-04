@@ -142,10 +142,10 @@
 
 
 ####################################################################### K Closest points to origin
-# class Solution:
-#     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]: 
-#         p = sorted(points, key = lambda x: x[0]**2 + x[1]**2)
+class Solution:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]: 
+        p = sorted(points, key = lambda x: x[0]**2 + x[1]**2)
 
-#         heap = [[-(i**2 + j**2), i, j] for i,j in points[:k]] 
+        heap = [[-(i**2 + j**2), i, j] for i,j in points[:k]] 
 
-#         return p[:k]
+        return p[:k]
