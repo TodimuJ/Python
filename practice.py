@@ -149,4 +149,7 @@ class Solution:
         heap = [[-(i**2 + j**2), i, j] for i,j in points[:k]] 
         heapq.heapify(heap)
 
+        for i,j in points[:k]:
+            d = (i**2 + j**2)
+
         return p[:k]
