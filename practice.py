@@ -147,5 +147,6 @@ class Solution:
         p = sorted(points, key = lambda x: x[0]**2 + x[1]**2)
 
         heap = [[-(i**2 + j**2), i, j] for i,j in points[:k]] 
+        heapq.heapify(heap)
 
         return p[:k]
