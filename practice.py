@@ -153,6 +153,7 @@ class Solution:
             d = (i**2 + j**2)
 
             if -heap[0][0] > d:
-                
+                heapq.heapreplace()
+
 
         return p[:k]
