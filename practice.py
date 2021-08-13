@@ -153,7 +153,9 @@ class Solution:
             d = (i**2 + j**2)
 
             if -heap[0][0] > d:
-                heapq.heapreplace(heap)
+                heapq.heapreplace(heap, [-d, i, j])
+
+        return 
 
 
         return p[:k]
