@@ -155,7 +155,4 @@ class Solution:
             if -heap[0][0] > d:
                 heapq.heapreplace(heap, [-d, i, j])
 
-        return 
-
-
-        return p[:k]
+        return [[i,j] for d,i,j in heap]
