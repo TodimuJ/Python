@@ -10,12 +10,13 @@ while True:
 
     words.append(word)
 
-f = open("textRandom2.txt","w+")
+f = open("textRandom3.txt","w+")
 
-for i in range(100000):
+for i in range(5000000):
+    f.write(random.choice(words) + " ")
+
     if i%30 == 0:
         f.write("\n")
 
-    f.write(random.choice(words) + " ")
 
 f.close()
