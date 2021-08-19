@@ -12,7 +12,7 @@ while True:
 
     words.append(word)
 
-f = open("textRandom3.txt","w+")
+f = open("textRandom.txt","w+")
 
 for i in range(number):
     f.write(random.choice(words) + " ")
