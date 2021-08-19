@@ -10,9 +10,9 @@ while True:
 
     words.append(word)
 
-f = open("textRandom.txt","w+")
+f = open("textRandom2.txt","w+")
 
-for i in range(10000):
+for i in range(100000):
     if i%30 == 0:
         f.write("\n")
 
