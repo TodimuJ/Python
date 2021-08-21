@@ -20,5 +20,4 @@ for i in range(number):
     if i%30 == 0:
         f.write("\n")
 
-
 f.close()
