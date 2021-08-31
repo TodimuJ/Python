@@ -4,9 +4,9 @@ cache = {}
 print("Type words you want to find: \n")
 
 while True:
-    find = input("")
+    word = input("")
 
-    if find == "":
+    if word == "":
         break
 
     cache[find] = 0
