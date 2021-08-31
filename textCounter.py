@@ -6,7 +6,7 @@ print("Type words you want to find: \n")
 while True:
     word = input("")
 
-    if word == "":
+    if find == "":
         break
 
     cache[find] = 0
