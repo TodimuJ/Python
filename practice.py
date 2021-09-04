@@ -153,7 +153,7 @@ class Solution:
         for i,j in points[k:]:
             d = (i**2 + j**2)
 
-            if -heap[0][0] > d:
+            if -(heap[0][0]) > d:
                 heapq.heapreplace(heap, [-d, i, j])
 
         return [[i,j] for d,i,j in heap]
