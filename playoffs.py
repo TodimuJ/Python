@@ -17,4 +17,4 @@ if scores[0][1] == scores[1][1]:
     print(winner + " won the league in a playoff.")
     
 else:
-    print(str(scores[0][0]) + " won the league with " + scores[0][1] + " wins.")
+    print(str(scores[0][0]) + " won the league with " + scores[0][1] + " win(s).")
