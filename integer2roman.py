@@ -21,7 +21,7 @@ def queryUser():
         if number == "":
             break
         
-        
+
         else:
             print(roman(int(number)))
 
@@ -37,7 +37,7 @@ def roman(num):
 
         if mod >= 1:
             result += mod*value
-            num = num%key
+            num %= key
 
     return result
 
