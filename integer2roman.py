@@ -37,7 +37,7 @@ def roman(num):
 
         if mod >= 1:
             result += mod*value
-            num %= key
+            num = num%key
 
     return result
 
