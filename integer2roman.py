@@ -14,16 +14,7 @@ romans = {
     1: "I"
     }
 
-def queryUser():
-    while True:
-        number = input("Type a number: ")
 
-        if number == "":
-            break
-        
-
-        else:
-            print(roman(int(number)))
 
 def roman(num):
     result = ""
