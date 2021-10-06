@@ -41,5 +41,4 @@ def roman(num):
 
     return result
 
-
 queryUser()
