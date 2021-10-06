@@ -32,5 +32,15 @@ def roman(num):
 
     return result
 
+def queryUser():
+    while True:
+        number = input("Type a number: ")
+
+        if number == "":
+            break
+        
+
+        else:
+            print(roman(int(number)))
 
 queryUser()
