@@ -18,28 +18,6 @@ romans = {
 def roman(num):
     result = ""
 
-
-    for key, value in romans.items():
-        if num in romans:
-            result += romans[num]
-            return result
-        
-        mod = num//key
-
-        if mod >= 1:
-            result += mod*value
-            num = num%key
-
-
-    return result
-
-
-
-
-
-def roman(num):
-    result = ""
-
     for key, value in romans.items():
         if num in romans:
             result += romans[num]
