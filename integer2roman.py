@@ -38,7 +38,6 @@ def queryUser():
         if number == "":
             break
         
-
         else:
             print(roman(int(number)))
 
