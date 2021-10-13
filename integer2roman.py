@@ -23,7 +23,7 @@ def roman(num):
             result += romans[num]
             return result
 
-        mod = num//key)
+        mod = (num//key)
 
         if mod >= 1:
             result += mod*value
