@@ -33,7 +33,7 @@ def roman(num):
 
 def queryUser():
     while True:
-        number = input("Type a number:")
+        number = input("Type a number: ")
 
         if number == "":
             break
