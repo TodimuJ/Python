@@ -1,5 +1,5 @@
-import pyscreenshot as screen
-import time, os, math, re, webbrowser, glob, random, shutil, img2pdf
+import gymReservationDetails as grd
+import time, os, math, re, webbrowser
 import urllib.request 
 import selenium.webdriver.chrome.webdriver
 from selenium.webdriver import ActionChains
@@ -8,3 +8,5 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
 url = 'https://reservation.frontdesksuite.ca/rcfs/richcraftkanata'
+
+driver = webdriver.Chrome(chrome_options=chrome_options)
