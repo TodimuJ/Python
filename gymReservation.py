@@ -9,4 +9,4 @@ from selenium.webdriver.chrome.options import Options
 
 url = 'https://reservation.frontdesksuite.ca/rcfs/richcraftkanata'
 
-driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = webdriver.Chrome()
