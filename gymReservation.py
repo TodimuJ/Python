@@ -8,7 +8,7 @@ from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 # from selenium.webdriver.chrome.options import Options
 
-url = 'https://reservation.frontdesksuite.ca/rcfs/richcraftkanata'
+# url = 'https://reservation.frontdesksuite.ca/rcfs/richcraftkanata'
 
 driver = webdriver.Chrome()
 # driver = webdriver.Chrome(ChromeDriverManager().install())
