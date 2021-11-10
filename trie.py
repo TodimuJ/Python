@@ -140,6 +140,6 @@ class Solution:
 
 s = Solution()
 s.build(['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'drone', 'dodge', 'dentist', 'fume', 'dragon', 'doodle', 'dash', 
-'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'dew', 'dArts', 'drift', 'dress', 'argon'])
+'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'danger', 'dew', 'dArts', 'drift', 'dress', 'argon'])
 # print(s.autocomplete('d'))
 print(s.queryUser())
