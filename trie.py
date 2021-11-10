@@ -119,7 +119,6 @@ class Solution:
 
         for letter in node.children:
             words += self.findWords(node.children[letter], prefix + letter)
-
         
         return words
 
