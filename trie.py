@@ -141,4 +141,5 @@ s = Solution()
 s.build(['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'drone', 'dodge', 'dentist', 'fume', 'dragon', 'doodle', 'dash', 
 'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'danger', 'dew', 'dArts', 'drift', 'dress', 'argon', 'drive'])
 # print(s.autocomplete('d'))
+
 print(s.queryUser())
