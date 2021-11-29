@@ -112,7 +112,7 @@ class Solution:
 
 
     def findWords(self, node, prefix):
-        words = []
+        words=[]
 
         if node.isWord:
             words += [prefix]
