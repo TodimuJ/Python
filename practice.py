@@ -147,13 +147,13 @@ class Solution:
         # p = sorted(points, key = lambda x: x[0]**2 + x[1]**2)
         # return p[:k]
 
-        heap = [[-(i**2 + j**2), i, j] for i,j in points[:k]] 
-        heapq.heapify(heap)
+        # heap = [[-(i**2 + j**2), i, j] for i,j in points[:k]] 
+        # heapq.heapify(heap)
 
-        for i,j in points[k:]:
-            d = (i**2 + j**2)
+        # for i,j in points[k:]:
+        #     d = (i**2 + j**2)
 
-            if -(heap[0][0]) > d:
-                heapq.heapreplace(heap, [-d, i, j])
+        #     if -(heap[0][0]) > d:
+        #         heapq.heapreplace(heap, [-d, i, j])
 
         return [[i,j] for d,i,j in heap]
