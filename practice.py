@@ -156,4 +156,4 @@ class Solution:
         #     if -(heap[0][0]) > d:
         #         heapq.heapreplace(heap, [-d, i, j])
 
-        return [[i,j] for d,i,j in heap]
+        # return [[i,j] for d,i,j in heap]
