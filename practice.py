@@ -103,22 +103,22 @@
 
 
 # ####################################################################### 206 Reverse Linked List 1
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
         
-# class Solution:
-#     def reverseList(self, head: ListNode) -> ListNode:
-#         prev = None
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+        prev = None
         
-#         while head:
-#             temp = head
-#             head = head.next
-#             temp.next = prev
-#             prev = temp
+        while head:
+            temp = head
+            head = head.next
+            temp.next = prev
+            prev = temp
             
-#         return prev
+        return prev
         
     
 ####################################################################### 387 First unique character in string
