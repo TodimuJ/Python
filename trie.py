@@ -129,7 +129,7 @@ class Solution:
             letter = input("Start typing word: ")
 
             if letter  == "":
-                print("End of search")
+                print("End of search...")
                 break
             
             print(s.autocomplete(letter))
