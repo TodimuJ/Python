@@ -185,21 +185,13 @@ def getItems(entries2):
             count += 1
             result.append(db1[count-1][0])
             
-            # viewIndexes.append(i-1)
-        
-        # print(db)
-    
-    # print(viewIndexes)
-    
-    # for j in viewIndexes:
-    #     result.append(db[1])
     
     print(result)
         
 
 def updateDatabase(database):
-    db = sorted(database, key = lambda x: (x[1], x[0]))
-    return db 
+    database.sort(key = lambda x: (x[1], x[0]))
+    return database 
     
     
 getItems(entries2)
