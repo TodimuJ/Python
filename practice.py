@@ -163,6 +163,9 @@ class Solution:
 
 
 ####################################################################### Economy Mart
+# entries2 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['INSERT', 'gum', 1], ['INSERT', 'pizza', 2], ['INSERT', 'mouse', 6], ['INSERT', 'water', 2], ['INSERT', 'bag', 1], ['INSERT', 'creatine', 2]]
+# entries2 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['VIEW', '-', '-'], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
+# entries2 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
 entries2 = [['INSERT', 'fries', 4], ['INSERT', 'soda', 2], ['VIEW', '-', '-'], ['VIEW', '-', '-'], ['INSERT', 'hamburger', 5], ['VIEW', '-', '-'], ['INSERT', 'nuggets', 4], ['INSERT', 'cookie', 1], ['VIEW', '-', '-'], ['VIEW', '-', '-']]
 
 def getItems(entries2):
