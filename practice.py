@@ -122,30 +122,30 @@
         
     
 ####################################################################### 387 First unique character in string
-from collections import OrderedDict
+# from collections import OrderedDict
 
-class Solution:
-    def firstUniqChar(self, s: str) -> int:
-        cache = OrderedDict()
+# class Solution:
+#     def firstUniqChar(self, s: str) -> int:
+#         cache = OrderedDict()
     
-        for i in range(len(s)):
-            if s[i] not in cache:
-                cache[s[i]] = [0, i]
+#         for i in range(len(s)):
+#             if s[i] not in cache:
+#                 cache[s[i]] = [0, i]
                 
-            cache[s[i]][0] += 1
+#             cache[s[i]][0] += 1
             
-        for x in cache:
-            if cache[x][0] == 1:
-                return cache[x][1]
+#         for x in cache:
+#             if cache[x][0] == 1:
+#                 return cache[x][1]
             
-        return -1
+#         return -1
 
 
 ####################################################################### K Closest points to origin
-class Solution:
-    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]: 
-        p = sorted(points, key = lambda x: x[0]**2 + x[1]**2)
-        return p[:k]
+# class Solution:
+#     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]: 
+#         p = sorted(points, key = lambda x: x[0]**2 + x[1]**2)
+#         return p[:k]
 
 
         # heap = [[-(i**2 + j**2), i, j] for i,j in points[:k]] 
