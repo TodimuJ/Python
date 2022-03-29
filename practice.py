@@ -147,6 +147,7 @@ class Solution:
         p = sorted(points, key = lambda x: x[0]**2 + x[1]**2)
         return p[:k]
 
+
         # heap = [[-(i**2 + j**2), i, j] for i,j in points[:k]] 
         # heapq.heapify(heap)
 
@@ -157,3 +158,45 @@ class Solution:
         #         heapq.heapreplace(heap, [-d, i, j])
 
         # return [[i,j] for d,i,j in heap]
+
+
+
+
+####################################################################### Economy Mart
+entries2 = [['INSERT', 'fries', 4], ['INSERT', 'soda', 2], ['VIEW', '-', '-'], ['VIEW', '-', '-'], ['INSERT', 'hamburger', 5], ['VIEW', '-', '-'], ['INSERT', 'nuggets', 4], ['INSERT', 'cookie', 1], ['VIEW', '-', '-'], ['VIEW', '-', '-']]
+
+def getItems(entries2):
+    result = []
+    db = []
+    count = 0
+    # viewIndexes = []
+    
+    for i, entry in enumerate(entries2):
+        # print(i)
+        if entry[0] == "INSERT":
+            db.append([entry[1], int(entry[2])])
+        
+        
+        if entry[0] == "VIEW":
+            db1 = updateDatabase(db)
+            count += 1
+            result.append(db1[count-1][0])
+            
+            # viewIndexes.append(i-1)
+        
+        # print(db)
+    
+    # print(viewIndexes)
+    
+    # for j in viewIndexes:
+    #     result.append(db[1])
+    
+    print(result)
+        
+
+def updateDatabase(database):
+    db = sorted(database, key = lambda x: (x[1], x[0]))
+    return db 
+    
+    
+getItems(entries2)
