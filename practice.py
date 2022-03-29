@@ -164,21 +164,18 @@
 
 ####################################################################### Economy Mart
 # entries1 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['INSERT', 'gum', 1], ['INSERT', 'pizza', 2], ['INSERT', 'mouse', 6], ['INSERT', 'water', 2], ['INSERT', 'bag', 1], ['INSERT', 'creatine', 2]]
-# entries2 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['VIEW', '-', '-'], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
-# entries3 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
-entries = [['INSERT', 'fries', 4], ['INSERT', 'soda', 2], ['VIEW', '-', '-'], ['VIEW', '-', '-'], ['INSERT', 'hamburger', 5], ['VIEW', '-', '-'], ['INSERT', 'nuggets', 4], ['INSERT', 'cookie', 1], ['VIEW', '-', '-'], ['VIEW', '-', '-']]
+entries = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['VIEW', '-', '-'], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
+entries2 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
+entries1 = [['INSERT', 'fries', 4], ['INSERT', 'soda', 2], ['VIEW', '-', '-'], ['VIEW', '-', '-'], ['INSERT', 'hamburger', 5], ['VIEW', '-', '-'], ['INSERT', 'nuggets', 4], ['INSERT', 'cookie', 1], ['VIEW', '-', '-'], ['VIEW', '-', '-']]
 
 def getItems(entries):
     result = []
     db = []
     count = 0
-    # viewIndexes = []
-    
-    for i, entry in enumerate(entries):
-        # print(i)
+
+    for entry in entries:
         if entry[0] == "INSERT":
             db.append([entry[1], int(entry[2])])
-        
         
         if entry[0] == "VIEW":
             db1 = updateDatabase(db)
