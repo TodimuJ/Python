@@ -163,7 +163,7 @@
 
 
 ####################################################################### Economy Mart
-entries = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['VIEW', '-', '-'], ['INSERT', 'gum', 1], ['VIEW', '-', '-'], ['INSERT', 'pizza', 2], ['INSERT', 'mouse', 6], ['INSERT', 'water', 2], ['INSERT', 'bag', 1], ['VIEW', '-', '-'], ['INSERT', 'creatine', 2], ['VIEW', '-', '-']]
+# entries = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['VIEW', '-', '-'], ['INSERT', 'gum', 1], ['VIEW', '-', '-'], ['INSERT', 'pizza', 2], ['INSERT', 'mouse', 6], ['INSERT', 'water', 2], ['INSERT', 'bag', 1], ['VIEW', '-', '-'], ['INSERT', 'creatine', 2], ['VIEW', '-', '-']]
 # entries = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['VIEW', '-', '-'], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
 # entries2 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
 # entries1 = [['INSERT', 'fries', 4], ['INSERT', 'soda', 2], ['VIEW', '-', '-'], ['VIEW', '-', '-'], ['INSERT', 'hamburger', 5], ['VIEW', '-', '-'], ['INSERT', 'nuggets', 4], ['INSERT', 'cookie', 1], ['VIEW', '-', '-'], ['VIEW', '-', '-']]
