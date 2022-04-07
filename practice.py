@@ -168,24 +168,24 @@ entries = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['VIEW', '-', '-'], [
 # entries2 = [['INSERT', 'milk', 4], ['INSERT', 'coffee', 3], ['INSERT', 'pizza', 5], ['INSERT', 'gum', 1], ['VIEW', '-', '-']]
 # entries1 = [['INSERT', 'fries', 4], ['INSERT', 'soda', 2], ['VIEW', '-', '-'], ['VIEW', '-', '-'], ['INSERT', 'hamburger', 5], ['VIEW', '-', '-'], ['INSERT', 'nuggets', 4], ['INSERT', 'cookie', 1], ['VIEW', '-', '-'], ['VIEW', '-', '-']]
 
-def getItems(entries):
-    db, result, count = [], [], 0
+# def getItems(entries):
+#     db, result, count = [], [], 0
 
-    for entry in entries:
-        if entry[0] == "INSERT":
-            db.append([entry[1], int(entry[2])])
+#     for entry in entries:
+#         if entry[0] == "INSERT":
+#             db.append([entry[1], int(entry[2])])
         
-        if entry[0] == "VIEW":
-            db1 = updateDatabase(db)
-            count += 1
-            result.append(db1[count-1][0])
+#         if entry[0] == "VIEW":
+#             db1 = updateDatabase(db)
+#             count += 1
+#             result.append(db1[count-1][0])
     
-    print(result)
+#     print(result)
         
 
-def updateDatabase(database):
-    database.sort(key = lambda x: (x[1], x[0]))
-    return database 
+# def updateDatabase(database):
+#     database.sort(key = lambda x: (x[1], x[0]))
+#     return database 
     
     
-getItems(entries)
+# getItems(entries)
