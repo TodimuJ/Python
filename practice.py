@@ -201,3 +201,26 @@ def isSameTree(self, p, q):
         
         
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right) 
+
+####################################################################### Subtree of another tree
+def isSubtree(self, root, subRoot):
+        def isSame(t, s):
+            if not t and not s:
+                return True
+            
+            if not t or not s:
+                return False
+            
+            return (t.val == s.val) and isSame(t.left, s.left) and isSame(t.right, s.right)
+            
+            
+        if not subRoot:
+            return True
+        
+        if not root:
+            return False
+        
+        if isSame(root, subRoot):
+            return True
+        
+        return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot) 
