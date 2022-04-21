@@ -189,3 +189,7 @@
     
     
 # getItems(entries)
+
+
+####################################################################### Is same tree
+def isSameTree(self, p, q):
