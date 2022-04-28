@@ -22,14 +22,30 @@ def roman(num):
         if num in romans:
             result += romans[num]
             return result
-
+        
         mod = num//key
 
         if mod >= 1:
             result += mod*value
             num = num%key
-
+    
     return result
+
+
+    # result = ""
+
+    # for key, value in romans.items():
+    #     if num in romans:
+    #         result += romans[num]
+    #         return result
+
+    #     mod = num//key
+
+    #     if mod >= 1:
+    #         result += mod*value
+    #         num = num%key
+
+    # return result
 
 def queryUser():
     while True:
