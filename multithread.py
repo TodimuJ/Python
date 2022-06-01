@@ -26,6 +26,11 @@ if __name__ == "__main__":
     # Normal thread without any arguments.
     thread_0 = threading.Thread(target=function_0)
     # Thread with a single argument passed.
-    
+    thread_1 = threading.Thread(target=function_1, args=(3,))
+    # Daemon thread: This thread will terminate when the program stops.
+    thread_2 = threading.Thread(target=function_2, daemon=True)
+    # Run the threads.
+
+
 
 
