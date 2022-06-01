@@ -20,5 +20,12 @@ def function_2():
     print("Thread 3: Is starting...")
     while True:
         print("Thread 3: Daemon process running...")
+        time.sleep(0.1)
+
+if __name__ == "__main__":
+    # Normal thread without any arguments.
+    thread_0 = threading.Thread(target=function_0)
+    # Thread with a single argument passed.
+    
 
 
