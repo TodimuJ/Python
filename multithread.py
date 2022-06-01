@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # Daemon thread: This thread will terminate when the program stops.
     thread_2 = threading.Thread(target=function_2, daemon=True)
     # Run the threads.
-
-
-
+    thread_0.start()
+    thread_1.start()
+    thread_2.start()
 
