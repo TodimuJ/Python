@@ -31,7 +31,6 @@ def roman(num):
     
     return result
 
-
     # result = ""
 
     # for key, value in romans.items():
@@ -56,7 +55,6 @@ def queryUser():
         
         else:
             print(roman(int(number)))
-
 
 
 queryUser()
