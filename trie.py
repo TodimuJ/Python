@@ -71,14 +71,102 @@
 # # print(s.autocomplete('d'))
 # print(s.getPrefix())
 
+# class Node:
+#     def __init__(self, children, isWord):
+#         self.children = children
+#         self.isWord = False
+
+# class Solution:
+#     def __init__(self):
+#         self.trie  = None
+
+#     def build(self, words):
+#         self.trie = Node({}, False)
+
+#         for word in words:
+#             current = self.trie
+#             for letter in word:
+#                 if letter not in current.children:
+#                     current.children[letter] = Node({}, False)
+
+#                 current = current.children[letter]
+            
+#             current.isWord = True
+    
+#     def autocomplete(self, prefix):
+#         if len(prefix) < 2:
+#             return "Please enter at least two letters \n"
+
+#         else:
+#             current = self.trie
+
+#             for letter in prefix:
+#                 if letter not in current.children:
+#                     return []
+
+#                 current = current.children[letter]
+
+#             three = sorted(self.findWords(current, prefix))
+
+#             return three[:3]
+
+
+#     def findWords(self, node, prefix):
+#         words = []
+
+#         if node.isWord:
+#             words += [prefix]
+
+#         for letter in node.children:
+#             words += self.findWords(node.children[letter], prefix + letter)
+        
+#         return words
+
+    
+#     def queryUser(self):
+        
+#         while True:
+#             letter = input("Start typing word: ")
+
+#             if letter  == "":
+#                 print("End of search...")
+#                 break
+            
+#             print(s.autocomplete(letter))
+
+
+
+
+# s = Solution()
+# s.build(['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'drone', 'dodge', 'dentist', 'fume', 'dragon', 'doodle', 'dash', 
+# 'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'danger', 'dew', 'dArts', 'drift', 'dress', 'argon', 'drive'])
+# # print(s.autocomplete('d'))
+
+# print(s.queryUser())
+
+
+
+
+
+
+
+
+
+
+##################################################################################################
+words = ['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'drone', 'dodge', 'dentist', 'fume', 'dragon', 'doodle', 'dash', 'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'danger', 
+'dew', 'dArts', 'drift', 'dress', 'argon', 'arrange', 'arrive', 'arose', 'around', 'arsenal', 'drive']
+
+
 class Node:
     def __init__(self, children, isWord):
         self.children = children
         self.isWord = False
 
+
 class Solution:
     def __init__(self):
-        self.trie  = None
+        self.trie = None
 
     def build(self, words):
         self.trie = Node({}, False)
@@ -88,14 +176,15 @@ class Solution:
             for letter in word:
                 if letter not in current.children:
                     current.children[letter] = Node({}, False)
-
+                    
                 current = current.children[letter]
-            
+
             current.isWord = True
+
     
     def autocomplete(self, prefix):
         if len(prefix) < 2:
-            return "Please enter at least two letters \n"
+            return "Please type at least two letters"
 
         else:
             current = self.trie
@@ -105,12 +194,13 @@ class Solution:
                     return []
 
                 current = current.children[letter]
+                
 
             three = sorted(self.findWords(current, prefix))
 
             return three[:3]
 
-
+    
     def findWords(self, node, prefix):
         words = []
 
@@ -119,27 +209,32 @@ class Solution:
 
         for letter in node.children:
             words += self.findWords(node.children[letter], prefix + letter)
-        
+
         return words
 
-    
-    def queryUser(self):
-        
-        while True:
-            letter = input("Start typing word: ")
 
-            if letter  == "":
-                print("End of search...")
+    def queryUser(self):
+
+        while True:
+            letter = input("Start typing: \n")
+
+            if letter == '':
                 break
-            
+
             print(s.autocomplete(letter))
 
-
-
-
 s = Solution()
-s.build(['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'drone', 'dodge', 'dentist', 'fume', 'dragon', 'doodle', 'dash', 
-'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'danger', 'dew', 'dArts', 'drift', 'dress', 'argon', 'drive'])
-# print(s.autocomplete('d'))
-
+s.build(words)
 print(s.queryUser())
+
+
+
+
+
+
+
+    
+
+
+
+
