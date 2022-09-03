@@ -7,4 +7,3 @@ qr_code.png("QRCode.png", scale=5)
 Image.open("QRCode.png")
 
 print("Enter anything to generate QR:")
-# https://twitter.com/clcoding
