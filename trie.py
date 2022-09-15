@@ -154,6 +154,87 @@
 
 
 ##################################################################################################
+# from calendar import c
+
+
+# words = ['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'drone', 'dodge', 'dentist', 'fume', 'dragon', 'doodle', 'dash', 'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'danger', 
+# 'dew', 'dArts', 'drift', 'dress', 'argon', 'arrange', 'arrive', 'arose', 'around', 'arsenal', 'drive']
+
+
+# class Node:
+#     def __init__(self, children, isWord):
+#         self.children = children
+#         self.isWord = False
+
+
+# class Solution:
+#     def __init__(self):
+#         self.trie = None
+
+#     def build(self, words):
+#         self.trie = Node({}, False)
+
+#         for word in words:
+#             current = self.trie
+#             for letter in word:
+#                 if letter not in current.children:
+#                     current.children[letter] = Node({}, False)
+                    
+#                 current = current.children[letter]
+
+#             current.isWord = True
+
+    
+#     def autocomplete(self, prefix):
+#         if len(prefix) < 2:
+#             return "Please type at least two letters"
+
+#         else:
+#             current = self.trie
+
+#             for letter in prefix:
+#                 if letter not in current.children:
+#                     return []
+
+#                 current = current.children[letter]
+                
+
+#             three = sorted(self.findWords(current, prefix))
+
+#             return three[:3]
+
+    
+#     def findWords(self, node, prefix):
+#         words = []
+
+#         if node.isWord:
+#             words += [prefix]
+
+#         for letter in node.children:
+#             words += self.findWords(node.children[letter], prefix + letter)
+
+#         return words
+
+
+#     def queryUser(self):
+
+#         while True:
+#             letter = input("Start typing: \n")
+
+#             if letter == '':
+#                 break
+
+#             print(s.autocomplete(letter))
+
+# s = Solution()
+# s.build(words)
+# print(s.queryUser())
+
+
+
+
+######################################################################
+
 words = ['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'drone', 'dodge', 'dentist', 'fume', 'dragon', 'doodle', 'dash', 'dealer', 'deal', 'deaf', 'destiny', 'deloitte', 'danger', 
 'dew', 'dArts', 'drift', 'dress', 'argon', 'arrange', 'arrive', 'arose', 'around', 'arsenal', 'drive']
 
@@ -161,13 +242,9 @@ words = ['dog', 'dark', 'dresser', 'cat', 'door', 'date', 'daddy', 'daemon', 'dr
 class Node:
     def __init__(self, children, isWord):
         self.children = children
-        self.isWord = False
-
+        self.isWord = False, 
 
 class Solution:
-    def __init__(self):
-        self.trie = None
-
     def build(self, words):
         self.trie = Node({}, False)
 
@@ -175,16 +252,16 @@ class Solution:
             current = self.trie
             for letter in word:
                 if letter not in current.children:
-                    current.children[letter] = Node({}, False)
-                    
+                    current.children[letter] =  Node({}, False)
+                
                 current = current.children[letter]
-
-            current.isWord = True
+        
+        current.isWord = True
 
     
     def autocomplete(self, prefix):
         if len(prefix) < 2:
-            return "Please type at least two letters"
+            print("Please type at least two letters...")
 
         else:
             current = self.trie
@@ -194,11 +271,10 @@ class Solution:
                     return []
 
                 current = current.children[letter]
-                
+        
+            three = sorted(self.findWords(current, prefix), reverse = False)
 
-            three = sorted(self.findWords(current, prefix))
-
-            return three[:3]
+        return three[:3]
 
     
     def findWords(self, node, prefix):
@@ -214,26 +290,28 @@ class Solution:
 
 
     def queryUser(self):
-
         while True:
             letter = input("Start typing: \n")
 
-            if letter == '':
-                break
+            if letter == " ":
+                break 
 
-            print(s.autocomplete(letter))
+
+            print(self.autocomplete(letter))
+
 
 s = Solution()
 s.build(words)
 print(s.queryUser())
 
+                   
 
 
 
 
 
 
-    
+
 
 
 
