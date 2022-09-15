@@ -274,7 +274,7 @@ class Solution:
         
             three = sorted(self.findWords(current, prefix), reverse = False)
 
-        return three[:3]
+            return three[:3]
 
     
     def findWords(self, node, prefix):
@@ -293,9 +293,9 @@ class Solution:
         while True:
             letter = input("Start typing: \n")
 
-            if letter == " ":
+            if letter == "":
                 break 
-
+            
 
             print(self.autocomplete(letter))
 
@@ -303,11 +303,6 @@ class Solution:
 s = Solution()
 s.build(words)
 print(s.queryUser())
-
-                   
-
-
-
 
 
 
