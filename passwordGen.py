@@ -3,7 +3,6 @@ import string
 
 password = ''
 letters = [chr(int(i)) for i in range(97,123)]
-
 number = random.randint(0, 19
 
 length = int(input("What is the length of your password? \n"))
