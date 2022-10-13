@@ -7,7 +7,6 @@ number = random.randint(0, 19
 
 length = int(input("What is the length of your password? \n"))
 
-
 for i in range(length):
     letter = random.choice(string.ascii_letters)
     if i == 0:
