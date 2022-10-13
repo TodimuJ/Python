@@ -1,12 +1,27 @@
 import random
 import string
 
-#lowercase -> 97-122
-
 password = ''
 letters = [chr(int(i)) for i in range(97,123)]
-number = random.randint(0, 10)
-print(letters)
-print(number)
 
+number = random.randint(0, 19
+
+length = int(input("What is the length of your password? \n"))
+
+
+for i in range(length):
+    letter = random.choice(string.ascii_letters)
+    if i == 0:
+        password += letter.upper()
+
+    if i == length - 1:
+        password += "!"
+
+    if i == 2:
+        password += str(number)
+
+    else:
+        password += letter.lower()
+
+print(password)
 
