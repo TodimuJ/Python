@@ -7,13 +7,14 @@ number = random.randint(0, 9)
 
 length = int(input("What is the length of your password? \n"))
 
-for i in range(length):
+for i in range(length - 1):
     letter = random.choice(string.ascii_letters)
     if i == 0:
         password += letter.upper()
 
-    if i == length - 1:
+    if i == length - 2:
         password += "!"
+        break
 
     if i == 2:
         password += str(number)
