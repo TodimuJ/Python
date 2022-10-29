@@ -7,7 +7,7 @@ qr_code.png("QRCode.png", scale=5)
 Image.open("QRCode.png")
 
 while True:
-    query = input("Type something to put in QR: ")
+    query = input("Type something to generate in QR: ")
     
     print(query)
     if query == "":
