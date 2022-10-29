@@ -10,7 +10,7 @@ while True:
     query = input("Type something to put in QR: ")
     
     print(query)
-    if query == " ":
+    if query == "":
         break
 
     print("Enter anything to generate QR: \n")
