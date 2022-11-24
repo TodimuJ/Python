@@ -1,4 +1,4 @@
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 def bar_chart(members, labels, pos):
     plt.bar(pos, numbers, color='blue')
