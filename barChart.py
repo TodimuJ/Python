@@ -9,3 +9,4 @@ if __name__ == '__main__':
     numbers = [2, 1, 4, 6]
     labels = ['Electric', 'Solar', 'Diesel', 'Unleaded']
     pos = list(range(4))
+    bar_char(number)
