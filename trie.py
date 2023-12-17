@@ -244,7 +244,7 @@ class Node:
         self.children = children
         self.isWord = False, 
 
-class Solution:
+class Trie:
     def build(self, words):
         self.trie = Node({}, False)
 
@@ -300,7 +300,7 @@ class Solution:
             print(self.autocomplete(letter))
 
 
-s = Solution()
+s = Trie()
 s.build(words)
 print(s.queryUser())
 
